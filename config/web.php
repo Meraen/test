@@ -7,6 +7,15 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'urlManager' => [
+                'class' => 'yii\web\UrlManager',
+                'enablePrettyUrl' => true,
+                'showScriptName' => false,
+                'rules' => [
+                    //redirect for url
+                //'test' => 'site/about'
+            ],
+            ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'DvdMQpu1wLWMcOirDUJbVU3Q6nBBDS7U',
@@ -38,14 +47,15 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        
+//        'urlManager' => [
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => true,
+//            'rules' => [
+////                'test' => 'site/about'
+//            ],
+//        ],
+        
     ],
     'params' => $params,
 ];
