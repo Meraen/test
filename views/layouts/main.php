@@ -23,21 +23,25 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<!--<header>
+    <p>LOGO</p>
+</header>-->
 <div class="wrap">
+    
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' =>  Html::img('/image/logo.png'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+//            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'header ',
         ],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'Gallery', 'url' => ['/site/gallery']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'FormTest', 'url' => ['/site/entry']],
             Yii::$app->user->isGuest ? (
@@ -69,7 +73,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"></p>
     </div>
 </footer>
 

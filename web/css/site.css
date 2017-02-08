@@ -13,11 +13,38 @@ body {
 .wrap > .container {
     padding: 70px 15px 20px;
 }
+.header
+{
+    height: 65px;
+    background-color: #b8d668;
+    border-top: 1px solid #96af54;
+    padding-top: 20px;
+    
+}
+.header a
+{
+    color: #005f04;
+    padding: 0;
+}
+.header li:hover
+{
+    background: #fff;
+}
+.header li a 
+{
+    display: inline;
+}
+.header img
+{
+    position: relative;
+    height: 65px;
+    top: -22px;
+}
 
 .footer {
     height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
+    background-color: #b8d668;
+    border-top: 1px solid #96af54;
     padding-top: 20px;
 }
 
